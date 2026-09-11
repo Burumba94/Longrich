@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #c9a227;
+  --color-gold-dark: #a67c00;
+  --color-cream: #fbf8f1;
+  --color-black-soft: #171717;
+}
+
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #171717;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
