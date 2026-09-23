@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   ArrowRightIcon,
   ShoppingBagIcon,
@@ -41,8 +42,8 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              href="/produits"
+            <Link
+              to="/produits"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 font-semibold text-white shadow-lg shadow-gold/20 transition hover:bg-gold-dark"
             >
               <ShoppingBagIcon className="h-5 w-5" />
@@ -50,7 +51,7 @@ export default function Hero() {
               Découvrir les produits
 
               <ArrowRightIcon className="h-4 w-4 transition group-hover:translate-x-1" />
-            </a>
+            </Link>
 
             <a
               href="https://wa.me/221766121766"

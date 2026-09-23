@@ -50,7 +50,7 @@ export default function Navbar() {
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
           {/* Logo */}
-          <a href="/" className="group">
+          <Link to="/" className="group">
             <div className="flex items-center gap-2">
               <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gold text-xl text-white shadow-sm">
                 L
@@ -66,14 +66,14 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop navigation */}
           <div className="hidden items-center gap-7 lg:flex">
             {navigation.map((item, index) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className={`relative text-sm font-medium transition ${
                   index === 0
                     ? "text-gold"
@@ -85,7 +85,7 @@ export default function Navbar() {
                 {index === 0 && (
                   <span className="absolute -bottom-2 left-0 h-0.5 w-full bg-gold" />
                 )}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -131,14 +131,14 @@ export default function Navbar() {
           <div className="border-t border-gray-100 bg-white px-5 py-5 lg:hidden">
             <div className="flex flex-col gap-1">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   onClick={() => setMobileOpen(false)}
                   className="rounded-xl px-4 py-3 font-medium text-gray-700 transition hover:bg-cream hover:text-gold"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
 
               <a
